@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Game Over</string>
+    <string name="User">User</string>
+    <string name="Credit">Go to Credits</string>
+    <string name="Login">Log In</string>
+    <string name="Info">Application Information:</string>
+    <string name="Description">This application is intended to store information about completed games.</string>
+    <string name="Contact">Contact</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="introduccionpager">In this app you will be able to see a list of games and add them to favorites</string>
+    <string name="Bienvenida">Welcome to Game Over</string>
+    <string name="mostrar">Not Show Again</string>
+
+    <string name="juego">Game:</string>
+    <string name="Genero">Genre:</string>
+    <string name="Estudio">Studio:</string>
+    <string name="Nota">Rating:</string>
+
+    <string name="Usuario">Profile:</string>
+    <string name="Favoritos">Favorites</string>
+
+
+    <string name="ListaJuegos">Games</string>
+    <string name="ListaFavoritos">Favorites</string>
+    <string name="Perfil">Profile</string>
+</resources>

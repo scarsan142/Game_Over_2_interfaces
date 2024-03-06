@@ -14,6 +14,7 @@ import androidx.fragment.app.setFragmentResult
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.marisma.gameover.databinding.FragmentLoginBinding
+import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch
 import preferences
 
@@ -47,7 +48,15 @@ class LoginFragment : Fragment() {
             } else {
                 lifecycleScope.launch {
                     preferences.saveUserName(nombreUsu)
-                    findNavController().navigate(R.id.action_loginFragment_to_viewPagerFragment)
+                    val mostrarIntroduccion = preferences.mostrarIntroduccionFlow.firstOrNull() ?: true
+
+                    if (mostrarIntroduccion) {
+                        // Si se debe mostrar la introducción, navegar a ViewPagerFragment
+                        findNavController().navigate(R.id.action_loginFragment_to_viewPagerFragment)
+                    } else {
+                        // Navegar directamente a MainFragment si no se debe mostrar la introducción
+                        findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
+                    }
                 }
                 // Si el campo de usuario no está vacío, continuar con la navegación
                 UsuarioProvider.usuario = Usuario(nombreUsu)

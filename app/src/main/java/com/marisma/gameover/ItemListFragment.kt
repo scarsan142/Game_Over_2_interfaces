@@ -63,7 +63,7 @@ class ItemListFragment : Fragment() {
     private fun onItemSelected(juego: Juego) {
         Toast.makeText(
             requireContext(),
-            juego.juego,
+            "juego.juego",
             Toast.LENGTH_SHORT
         ).show()
     }

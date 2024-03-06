@@ -9,4 +9,3 @@ data class Juego(
     val foto:String){
 
 }
-
